@@ -3,7 +3,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<TextView
+   <TextView
   android:id="@+id/tv_1"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
@@ -12,7 +12,8 @@
     <ImageView
         android:id="@+id/iv_1"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
+        android:scaleType="fitXY"
         android:src="@mipmap/ic_launcher"
         />
 </LinearLayout>

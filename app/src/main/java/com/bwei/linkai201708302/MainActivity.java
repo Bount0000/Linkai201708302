@@ -31,10 +31,10 @@ public class MainActivity extends AppCompatActivity {
         x.view().inject(this);
         list = new ArrayList<MyBean>();
         setImage(); 
-        String url="http://v.juhe.cn/toutiao/index?key=22a108244dbb8d1f49967cd74a0c144d";
+        String url="http://v.juhe.cn/toutiao/index";
         RequestParams params=new RequestParams(url);
-       // params.addBodyParameter("key","22a108244dbb8d1f49967cd74a0c144d");
-        x.http().get(params, new Callback.CommonCallback<String>() {
+        params.addBodyParameter("key","22a108244dbb8d1f49967cd74a0c144d");
+        x.http().post(params, new Callback.CommonCallback<String>() {
             @Override
             public void onSuccess(String result) {
                 Toast.makeText(MainActivity.this, result, Toast.LENGTH_SHORT).show();
@@ -71,9 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
     }
-
     private void setImage() {
         DisplayImageOptions option=new DisplayImageOptions.Builder()
                 .cacheInMemory(true)
